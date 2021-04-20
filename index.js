@@ -22,11 +22,20 @@ var dadosInsert = [
 // console.log("Query:");
 // console.log(query.toQuery());
 
-database.insert(dadosInsert).into("games").then((data) =>{
+// database.insert(dadosInsert).into("games").then((data) =>{
+//     console.log(data);
+// }).catch((error) =>{
+//     console.log(error);
+// });
+
+//#endregion INSERT
+
+//#region SELECT
+
+database.select().from("games").then((data) =>{
     console.log(data);
 }).catch((error) =>{
     console.log(error);
 });
 
-//#endregion INSERT
-
+//#endregion SELECT
