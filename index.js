@@ -1,5 +1,7 @@
 var database = require("./database");
 
+//#region CRUD
+
 //#region INSERT
 
 var dadosInsert = [
@@ -62,10 +64,13 @@ var dadosInsert = [
 
 //#region UPDATE
 
-database.where({id: 1}).update({preco: 15.15}).table("games").then((data) =>{
-    console.log(data);
-}).catch((error) =>{
-    console.log(error);
-});
+// database.where({id: 1}).update({preco: 15.15}).table("games").then((data) =>{
+//     console.log(data);
+// }).catch((error) =>{
+//     console.log(error);
+// });
 
 //#endregion UPDATE
+
+//#endregion CRUD
+
