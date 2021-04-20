@@ -42,11 +42,20 @@ var dadosInsert = [
 
 //#region WHERE
 
-var query = database
-    .where({nome: "Sea of Babacas"})
-    .where({id: 5})
-    .table("games");
-console.log(query.toQuery());
+// var query = database
+//     .where({nome: "Sea of Babacas"})
+//     .where({id: 5})
+//     .table("games");
+// console.log(query.toQuery());
 
 //#endregion WHERE
 
+//#region DELETE
+
+database.where({id: 2}).delete().from("games").then((data) =>{
+    console.log(data);
+}).catch((error) =>{
+    console.log(error);
+});
+
+//#endregion DELETE
