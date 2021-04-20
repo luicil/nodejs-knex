@@ -32,10 +32,21 @@ var dadosInsert = [
 
 //#region SELECT
 
-database.select().from("games").then((data) =>{
-    console.log(data);
-}).catch((error) =>{
-    console.log(error);
-});
+// database.select().table("games").then((data) =>{
+//     console.log(data);
+// }).catch((error) =>{
+//     console.log(error);
+// });
 
 //#endregion SELECT
+
+//#region WHERE
+
+var query = database
+    .where({nome: "Sea of Babacas"})
+    .where({id: 5})
+    .table("games");
+console.log(query.toQuery());
+
+//#endregion WHERE
+
