@@ -52,10 +52,20 @@ var dadosInsert = [
 
 //#region DELETE
 
-database.where({id: 2}).delete().from("games").then((data) =>{
+// database.where({id: 2}).delete().from("games").then((data) =>{
+//     console.log(data);
+// }).catch((error) =>{
+//     console.log(error);
+// });
+
+//#endregion DELETE
+
+//#region UPDATE
+
+database.where({id: 1}).update({preco: 15.15}).table("games").then((data) =>{
     console.log(data);
 }).catch((error) =>{
     console.log(error);
 });
 
-//#endregion DELETE
+//#endregion UPDATE
